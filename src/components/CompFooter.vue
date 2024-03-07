@@ -3,7 +3,7 @@
     <div class="container">
       <div class="relative">
         <h1
-          class="inknut-antiqua-black font-[900] text-[7rem] text-white w-[372px] leading-[70px]"
+          class="inknut-antiqua-black font-[900] text-[50px] lg:text-[7rem] text-white w-[220px] lg:w-[372px] leading-[50px] lg:leading-[70px]"
         >
           Newsletter Sign Up
         </h1>
@@ -11,7 +11,7 @@
 
         <form
           action=""
-          class="bg-[#FF564F] w-[470px] px-14 py-20 absolute right-0 -bottom-32"
+          class="bg-[#FF564F] w-[320px] lg:w-[470px] px-14 py-20 lg:absolute right-0 -bottom-32"
         >
           <div class="roboto-condensed-500 uppercase text-white">
             Get in touch
@@ -21,17 +21,17 @@
             name=""
             id=""
             placeholder="Your email"
-            class="p-5 bg-white w-[374px] mt-14"
+            class="p-5 bg-white w-[250px] lg:w-[374px] mt-14"
           />
           <button
-            class="uppercase font-bold bg-[#ed6a65] py-5 text-white mt-10 text-center w-[374px]"
+            class="uppercase font-bold bg-[#ed6a65] py-5 text-white mt-10 text-center w-[250px] lg:w-[374px]"
           >
             Subscribe
           </button>
         </form>
       </div>
 
-      <div class="mt-48 grid grid-cols-12 text-white">
+      <div class="mt-48 grid lg:grid-cols-12 text-white gap-20 lg:gap-0">
         <div class="col-span-3">
           <h2>AGENCY</h2>
           <P class="mt-6 w-[140px] text-[#FFFFFF80]"

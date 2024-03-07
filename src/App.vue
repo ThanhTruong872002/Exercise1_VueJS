@@ -1,5 +1,4 @@
 <template>
-
   <!-- Header  -->
   <comp-header />
 
@@ -11,9 +10,10 @@
 
   <!-- PortFolio  -->
   <comp-portfolio />
-  <!-- What our clients say  -->
 
+  <!-- What our clients say  -->
   <comp-client />
+
   <!-- Footer  -->
   <comp-footer />
 </template>
