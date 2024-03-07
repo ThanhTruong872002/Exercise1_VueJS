@@ -22,8 +22,14 @@ body {
 }
 
 .container {
-  width: calc(100% - 40%);
+  width: calc(100% - 20%);
   margin: 0 auto;
+}
+
+@media (min-width: 1600px) {
+  .container {
+    width: calc(100% - 40%);
+  }
 }
 
 .inknut-antiqua-light {
