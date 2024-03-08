@@ -15,17 +15,17 @@
           <div
             class="w-full text-center font-bold p-5 hover:bg-orange-500 cursor-pointer"
           >
-            About
+            <a href="#about"> About </a>
           </div>
           <div
             class="w-full text-center font-bold p-5 hover:bg-orange-500 cursor-pointer"
           >
-            Portfolio
+            <a href="#portfolio"> Portfolio </a>
           </div>
           <div
             class="w-full text-center font-bold p-5 hover:bg-orange-500 cursor-pointer"
           >
-            Contact
+            <a href="#contact"> Contact </a>
           </div>
         </div>
       </div>
