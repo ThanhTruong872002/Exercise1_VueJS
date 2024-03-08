@@ -1,5 +1,5 @@
 <template lang="">
-  <div class="pt-10 lg:pb-48 bg-black h-auto">
+  <div class="pt-10 lg:pb-48 bg-black h-auto overflow-hidden">
     <div class="container flex justify-between items-center">
       <h1 class="text-white font-bold lg:text-[24px] uppercase md:text-[16px]">
         Agency
@@ -103,7 +103,7 @@
               <img src="/src/images/Hero_decor1.svg" alt="" class="w-full" />
             </div>
             <div
-              class="lg:translate-y-4 lg:translate-x-0 -translate-y-[215%] translate-x-[60%] z-0"
+              class="lg:translate-y-4 lg:translate-x-0 -translate-y-[215%] translate-x-[50%] z-0"
             >
               <img
                 src="/src/images/Combined Shape.svg"

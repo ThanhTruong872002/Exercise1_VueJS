@@ -1,5 +1,5 @@
 <template lang="">
-  <div class="bg-black mt-40 py-28" id="contact">
+  <div class="bg-black mt-40 py-28 overflow-hidden" id="contact">
     <div
       class="container flex flex-col lg:flex-row justify-between items-center"
     >

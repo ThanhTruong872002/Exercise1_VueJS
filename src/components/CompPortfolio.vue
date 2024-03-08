@@ -1,5 +1,5 @@
 <template lang="">
-  <div class="lg:mt-40 mt-20 py-28 container" id="portfolio">
+  <div class="lg:mt-40 mt-20 py-28 container" id="portfolio ">
     <div class="">
       <div
         class="flex flex-col lg:flex-row justify-between items-center gap-10 lg:gap-0"
