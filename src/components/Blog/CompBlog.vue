@@ -54,7 +54,7 @@ export default {
     return {
       brand: [
         {
-          image: "./src/images/Brand1.svg",
+          image: "./src/assets/images/Brand1.svg",
           link: "https://www.atlassian.com/git/tutorials/syncing/git-pull",
         },
         {
