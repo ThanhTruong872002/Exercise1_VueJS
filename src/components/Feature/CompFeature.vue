@@ -64,42 +64,42 @@ export default {
       slides: [],
       features: [
         {
-          image: "./src/images/Feature1.svg",
+          image: "/src/images/Feature1.svg",
           title: "WHITE LABEL",
           subTitle:
             "Minuteness of the parts formed a great hindrance to my speed, resolved, contrary to my first intention, to make the being.",
           background: "bg-[#9013FE]",
         },
         {
-          image: "./src/images/Feature2.svg",
+          image: "/src/images/Feature2.svg",
           title: "CODE EXPORT",
           subTitle:
             "Minuteness of the parts formed a great hindrance to my speed, resolved, contrary to my first intention, to make the being.",
           background: "bg-[#417505]",
         },
         {
-          image: "./src/images/Feature1.svg",
+          image: "/src/images/Feature1.svg",
           title: "JAVASCRIPT",
           subTitle:
             "Minuteness of the parts formed a great hindrance to my speed, resolved, contrary to my first intention, to make the being.",
           background: "bg-red-500",
         },
         {
-          image: "./src/images/Feature2.svg",
+          image: "/src/images/Feature2.svg",
           title: "PYTHON",
           subTitle:
             "Minuteness of the parts formed a great hindrance to my speed, resolved, contrary to my first intention, to make the being.",
           background: "bg-blue-200",
         },
         {
-          image: "./src/images/Feature1.svg",
+          image: "/src/images/Feature1.svg",
           title: "WHITE LABEL",
           subTitle:
             "Minuteness of the parts formed a great hindrance to my speed, resolved, contrary to my first intention, to make the being.",
           background: "bg-[#9013FE]",
         },
         {
-          image: "./src/images/Feature2.svg",
+          image: "/src/images/Feature2.svg",
           title: "CODE EXPORT",
           subTitle:
             "Minuteness of the parts formed a great hindrance to my speed, resolved, contrary to my first intention, to make the being.",
