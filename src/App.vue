@@ -2,6 +2,9 @@
   <!-- Header  -->
   <comp-header />
 
+  <!-- Hero  -->
+  <comp-hero />
+
   <!-- Take Avantage  -->
   <comp-advantage />
 
@@ -14,17 +17,21 @@
   <!-- What our clients say  -->
   <comp-client />
 
+  <todo-list />
   <!-- Footer  -->
   <comp-footer />
 </template>
 
 <script>
-import CompHeader from "./components/CompHeader.vue";
-import CompFooter from "./components/CompFooter.vue";
-import CompAdvantage from "./components/CompAdvantage.vue";
-import CompFeature from "./components/CompFeature.vue";
-import CompPortfolio from "./components/CompPortfolio.vue";
-import CompClient from "./components/CompClient.vue";
+import CompHeader from "./components/Header/CompHeader.vue";
+import CompFooter from "./components/Footer/CompFooter.vue";
+import CompAdvantage from "./components/Advantage/CompAdvantage.vue";
+import CompFeature from "./components/Feature/CompFeature.vue";
+import CompPortfolio from "./components/Portfolio/CompPortfolio.vue";
+import CompClient from "./components/ClientSay/CompClient.vue";
+import TodoList from "./components/TodoList.vue";
+import CompHero from "./components/Hero/CompHero.vue";
+
 export default {
   components: {
     CompHeader,
@@ -33,7 +40,9 @@ export default {
     CompFeature,
     CompPortfolio,
     CompClient,
+    TodoList,
+    CompHero,
   },
 };
 </script>
-<style scoped></style>
+<style></style>

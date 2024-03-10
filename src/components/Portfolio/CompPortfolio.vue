@@ -1,15 +1,17 @@
 <template lang="">
-  <div class="lg:mt-40 mt-20 py-28 container" id="portfolio ">
+  <div class="lg:mt-40 mt-20 py-28 container" id="portfolio">
     <div class="">
       <div
         class="flex flex-col lg:flex-row justify-between items-center gap-10 lg:gap-0"
       >
         <h1
-          class="inknut-antiqua-black font-[900] text-[50px] w-full lg:text-[7rem] text-black lg:w-[372px] leading-[50px] lg:leading-[70px]"
+          class="inknut-antiqua-black font-[900] text-[50px] w-full uppercase lg:text-[5.6rem] text-black lg:w-[435px] leading-[50px] lg:leading-[70px]"
         >
           Check Our Projects
         </h1>
-        <p class="dm-sans-400 text-[#11111180] lg:w-[570px] leading-[30px]">
+        <p
+          class="dm-sans-400 text-[#11111180] lg:w-[570px] text-[16px] leading-[30px]"
+        >
           Minuteness of the parts formed a great hindrance to my speed,
           resolved, contrary to my first intention, to make the being.
           Minuteness of the parts formed a great hindrance to my speed,
@@ -24,12 +26,14 @@
     <div class="">
       <div class="grid lg:grid-cols-12 mt-32">
         <div class="col-span-4">
-          <h2 class="mb-10 roboto-condensed-500 text-[#111111] uppercase">
+          <h2
+            class="mb-10 roboto-condensed-500 text-[1.6rem] text-[#111111] uppercase"
+          >
             Portfolio
           </h2>
           <ul class="hidden lg:flex flex-col gap-6">
             <li
-              class="w-[170px] h-[48px] cursor-pointer rounded-s flex items-center justify-items-start pl-6"
+              class="w-[170px] h-[48px] cursor-pointer rounded-s flex items-center justify-items-start pl-6 text-[16px]"
               v-for="(category, index) in allCategories"
               :key="index"
               :class="{ active: selectedItemIndex === index }"
@@ -67,7 +71,9 @@
           >
             <div class="flex flex-col gap-8 pl-10">
               <div class="mt-96 z-20">
-                <p class="uppercase roboto-condensed-500 text-[#111111]">
+                <p
+                  class="uppercase roboto-condensed font-bold text-[#111111] text-[16px]"
+                >
                   design
                 </p>
                 <h2
@@ -77,18 +83,20 @@
                 </h2>
               </div>
             </div>
-            <div class="absolute top-8 lg:right-0 lg:-top-20">
-              <img src="/src/images/dog1.png" alt="" class=" " />
+            <div class="absolute -top-1 -right-4 lg:right-0 lg:-top-20">
+              <img src="/src/images/dog1.png" alt="" />
             </div>
           </div>
 
           <div
             v-if="selectedItemIndex === 2 || selectedItemIndex === 0"
-            class="w-full lg:relative h-[416px] bg-[#FF564F] mt-28 overflow-hidden"
+            class="w-full lg:relative h-[416px] bg-[#FF564F] mt-28"
           >
             <div class="flex flex-col gap-8 pl-10">
               <div class="mt-96 z-20">
-                <p class="uppercase roboto-condensed-500 text-white">
+                <p
+                  class="uppercase roboto-condensed-500 text-white text-[16px]"
+                >
                   Branding
                 </p>
                 <h2
@@ -99,23 +107,26 @@
               </div>
             </div>
             <div
-              class="lg:absolute lg:right-0 lg:-top-7 relative bottom-96 z-10"
+              class="lg:absolute lg:right-0 lg:translate-x-28 lg:-top-7 relative bottom-[29.6rem] z-10"
             >
               <img
-                src="/src/images/people1.png"
+                src="/src/images/people3.svg"
                 alt=""
-                class="w-[320px] h-[330px] lg:w-[614px] lg:h-[435px] object-cover"
+                class="h-[330px] lg:w-[614px] lg:h-[435px] object-cover"
               />
             </div>
           </div>
 
           <div
-            v-if="isLoadMore === true"
-            class="w-full lg:relative h-[416px] bg-[#2f6850] mt-28 overflow-hidden"
+            v-show="!isLoadMore"
+            v-if="selectedItemIndex === 2 || selectedItemIndex === 0"
+            class="w-full lg:relative h-[416px] bg-[#2f6850] mt-28"
           >
             <div class="flex flex-col gap-8 pl-10">
               <div class="mt-96 z-20">
-                <p class="uppercase roboto-condensed-500 text-white">
+                <p
+                  class="uppercase roboto-condensed tracking-[3px] text-white text-[1.6rem]"
+                >
                   Branding
                 </p>
                 <h2
@@ -126,12 +137,12 @@
               </div>
             </div>
             <div
-              class="lg:absolute lg:right-0 lg:-top-7 relative bottom-96 z-10"
+              class="lg:absolute lg:right-0 lg:translate-x-28 lg:-top-7 relative bottom-[29.6rem] z-10"
             >
               <img
-                src="/src/images/people1.png"
+                src="/src/images/people3.svg"
                 alt=""
-                class="w-[320px] h-[330px] lg:w-[614px] lg:h-[435px] object-cover"
+                class="w-full h-[330px] lg:w-[614px] lg:h-[435px] object-cover"
               />
             </div>
           </div>
@@ -154,14 +165,14 @@ export default {
   data() {
     return {
       text: "portfolio",
-      isLoadMore: false,
+      isLoadMore: true,
       selectedItemIndex: 0,
       allCategories: ["All", "Design", "Branding", "Development", "Products"],
     };
   },
   methods: {
     handleLoadMore() {
-      this.isLoadMore = true;
+      this.isLoadMore = false;
     },
     selectItem(index) {
       this.selectedItemIndex = index;

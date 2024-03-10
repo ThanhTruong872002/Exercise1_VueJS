@@ -1,0 +1,73 @@
+1. Binding:
+   = Value binding: {{}}
+
+- property binding:
+- v-bind:[ten thuoc tinh] ="bien" ===> viet tat bằng dấu :
+- claas và style: ==> :class hoặc :style (class sẽ phụ thuộc vào biến đã tạo) ====> ví dụ: :class ="daChon: selected"
+
+2. Model:
+
+- Liên Kết element với 1 properties
+
+3. EventHandling
+
+- Bắt sự kiện từ các element
+- Cú pháp: ==> v-on ===> ví dụ: v-on:click = "chanel.name === 123" ====> viết tắt là @click
+- Prevent default event: hủy bỏ mặc định của element ====> ví dụ:<Button type submit @click.prevent.default = "channel.name === 123"Button>
+
+4. ref: ánh xạ đén chính element đó
+
+<div id="className"></div>
+
+Nếu như làm javascript để lấy được id của 1 element phải sử dụng var a = document.getElementById('className')
+
+Còn sử dụng ref của Vuejs thì chỉ cần khai báo: <div ref="className"></div> 
+Dể sử dụng ref:  this.$refs.className => element html
+
+6. Conditional rendering
+
+    + v-show: ẩn hoặc hiện theo điều kiện, ví dụ khai báo isShow = true và dùng <div v-show = isShow >Nếu là true thì sẽ hiện</div>
+
+    + v-hide: ngược lại của v-show (true sẽ ẩn false sẽ hiện)
+
+    + v-if: giống v-show nhưng v-if sẽ làm mất element còn v-show thì sẽ thêm thuộc tính display: none vào element
+
+7. List rendering
+
+    + v-for: 
+
+8. Method: 
+    
+    + methods: hàm của vue Object để thực hiện các function xử lí 
+
+9. Watch:
+
+    + watch: theo dõi sự thay đổi của data
+
+10. Hooks:
+
+    + mounted: để gọi api là chính 
+
+11. Props: dữ liệu đẩy từ component cha ==> component con 
+
+    + Dùng mảng tên các props được khai báo trong <script>
+
+    props: ['taskData']
+
+12. Filter: dữ liệu ở dưới data khi truyền lên để render ra giao diện thì sẽ đi qua filter nằm ở giữa để formart hay sắp xếp... sau đó sẽ đc render ra giao diện 
+
+ví dụ: ở data số tiền là 1000000000 nhưng khi render ra giao diện chúng ta muốn là 1,000,000,000
+
+<div> {{tongTien | dauChamPhanTach}} </div>
+
+data() {
+    return {
+        tongTien: 1000000000
+    }
+},
+
+filters: {
+    dauChamPhanTach: function(soTien) {
+        return soTien.toFixed(2).replace(/\d(?=(\.....)))
+    }
+}
