@@ -55,6 +55,9 @@
   </div>
 </template>
 <script>
+import FeatureImg1 from "/src/assets/images/Feature1.svg";
+import FeatureImg2 from "/src/assets/images/Feature2.svg";
+
 export default {
   name: "comp-feature",
   data() {
@@ -64,42 +67,42 @@ export default {
       slides: [],
       features: [
         {
-          image: "/src/images/Feature1.svg",
+          image: FeatureImg1,
           title: "WHITE LABEL",
           subTitle:
             "Minuteness of the parts formed a great hindrance to my speed, resolved, contrary to my first intention, to make the being.",
           background: "bg-[#9013FE]",
         },
         {
-          image: "/src/images/Feature2.svg",
+          image: FeatureImg2,
           title: "CODE EXPORT",
           subTitle:
             "Minuteness of the parts formed a great hindrance to my speed, resolved, contrary to my first intention, to make the being.",
           background: "bg-[#417505]",
         },
         {
-          image: "/src/images/Feature1.svg",
+          image: FeatureImg1,
           title: "JAVASCRIPT",
           subTitle:
             "Minuteness of the parts formed a great hindrance to my speed, resolved, contrary to my first intention, to make the being.",
           background: "bg-red-500",
         },
         {
-          image: "/src/images/Feature2.svg",
+          image: FeatureImg2,
           title: "PYTHON",
           subTitle:
             "Minuteness of the parts formed a great hindrance to my speed, resolved, contrary to my first intention, to make the being.",
           background: "bg-blue-200",
         },
         {
-          image: "/src/images/Feature1.svg",
+          image: FeatureImg1,
           title: "WHITE LABEL",
           subTitle:
             "Minuteness of the parts formed a great hindrance to my speed, resolved, contrary to my first intention, to make the being.",
           background: "bg-[#9013FE]",
         },
         {
-          image: "/src/images/Feature2.svg",
+          image: FeatureImg2,
           title: "CODE EXPORT",
           subTitle:
             "Minuteness of the parts formed a great hindrance to my speed, resolved, contrary to my first intention, to make the being.",

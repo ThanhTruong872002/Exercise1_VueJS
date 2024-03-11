@@ -15,7 +15,7 @@
                   {{ banner.title }}
                 </h1>
                 <div class="lg:mt-16 mt-10 flex gap-14">
-                  <img :src="imageFL" alt="" />
+                  <img src="/src/assets/images/Flower_decor.svg" alt="" />
                   <p
                     class="text-white text-[16px] uppercase w-[229px] lg:w-[370px] leading-[40px] roboto-condensed tracking-[2px]"
                   >
@@ -58,17 +58,14 @@
 <script>
 import CompHeroButton from "./CompHeroButton.vue";
 import { ref } from "vue";
-import Flower from "/src/assets/images/Flower_decor.svg"
 export default {
   name: "comp-hero",
   components: {
     CompHeroButton,
-    Flower
   },
   data() {
     return {
       slideIndex: ref(0),
-      imageFL: Flower,
       banners: [
         {
           title: "We Create Amazing Sites With Ease",

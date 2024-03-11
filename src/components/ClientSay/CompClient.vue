@@ -64,6 +64,9 @@
 import CompBlog from "../Blog/CompBlog.vue";
 import { ref } from "vue";
 import CompClientButton from "./CompClientButton.vue";
+import Avatar1 from "/src/assets/images/Ava.svg"
+import Avatar2 from "/src/assets/images/Ava2.svg"
+
 
 export default {
   name: "comp-client",
@@ -76,21 +79,21 @@ export default {
       slideIndex: ref(0),
       clientSay: [
         {
-          image: "/src/images/Ava.svg",
+          image: Avatar1,
           name: "HELENA BRAUER",
           company: "Apple Inc.",
           background: "bg-[#417505]",
           desc: "What looked like a small patch of purple grass, above five feet square, was moving across the sand in their direction. When it came near enough he perceived that it was not grass; there were no blades, but only purple roots. The roots were revolving, for each small plant in the whole patch, like the spokes of a rimless wheel.",
         },
         {
-          image: "/src/images/Ava2.svg",
+          image: Avatar2,
           name: "Kay Totleben",
           company: "Microsoft",
           background: "bg-[#9013FE]",
           desc: "What looked like a small patch of purple grass, above five feet square, was moving across the sand in their direction. When it came near enough he perceived that it was not grass; there were no blades, but only purple roots. The roots were revolving, for each small plant in the whole patch, like the spokes of a rimless wheel.",
         },
         {
-          image: "/src/images/Ava2.svg",
+          image: Avatar2,
           name: "Kay Totleben",
           company: "Microsoft",
           background: "bg-red-500",
