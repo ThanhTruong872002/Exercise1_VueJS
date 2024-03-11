@@ -7,12 +7,12 @@
         <div
           class="w-[320px] h-[320px] lg:w-[470px] lg:h-[470px] rounded-[50%] bg-[#F8E71C] z-50"
         ></div>
-        <div class="absolute top-5 lg:-top-16 lg:-translate-x-40">
-          <img src="/src/images/Bitmap2.png" alt="" class=" " />
+        <div class="absolute top-5 lg:-top-16 lg:-translate-x-52">
+          <img src="/src/assets/images/Bitmap2.png" alt="" class=" " />
         </div>
         <img
           @click="playVideo"
-          src="/src/images/play.svg"
+          src="/src/assets/images/play.svg"
           alt=""
           class="absolute top-28 left-28 lg:top-52 lg:left-52 cursor-pointer"
         />

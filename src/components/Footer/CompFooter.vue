@@ -57,7 +57,7 @@
           <a href="#contact" class="cursor-pointer">Contact</a>
         </div>
         <div class="col-span-3">
-          <a href="https://www.facebook.com/profile.php?id=100012255758419" target="_blank"><img src="/src/images/social.svg" alt="" /></a>
+          <a href="https://www.facebook.com/profile.php?id=100012255758419" target="_blank"><img src="/src/assets/images/social.svg" alt="" /></a>
         </div>
       </div>
     </div>

@@ -17,7 +17,7 @@
   <!-- What our clients say  -->
   <comp-client />
 
-  <todo-list />
+  <!-- <todo-list /> -->
   <!-- Footer  -->
   <comp-footer />
 </template>

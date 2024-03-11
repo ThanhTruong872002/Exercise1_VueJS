@@ -28,7 +28,7 @@
               class="mt-10 lg:mt-0 relative lg:absolute lg:right-0 lg:top-10 z-0 w-[268px] h-[268px]"
             >
               <img
-                src="/src/images/Combined Shape.svg"
+                src="/src/assets/images/Combined Shape.svg"
                 alt=""
                 class="translate-x-64 lg:translate-x-0"
               />
@@ -37,7 +37,7 @@
                 :class="`${banner.background}`"
               >
                 <img
-                  src="/src/images/Hero_decor1.svg"
+                  src="/src/assets/images/Hero_decor1.svg"
                   alt=""
                   class="absolute -top-[20%] lg:top-[10%] h-[513px]"
                 />

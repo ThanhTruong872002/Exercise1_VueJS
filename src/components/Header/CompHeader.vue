@@ -6,7 +6,7 @@
       </h1>
       <div>
         <div class="lg:hidden cursor-pointer" @click="toggleMenu">
-          <img src="/src/images/menu.svg" alt="" class="w-[30px] h-[28px]" />
+          <img src="/src/assets/images/menu.svg" alt="" class="w-[30px] h-[28px]" />
         </div>
         <div
           v-if="isOpen === true"

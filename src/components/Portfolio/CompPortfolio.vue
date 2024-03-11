@@ -84,7 +84,7 @@
               </div>
             </div>
             <div class="absolute -top-1 -right-4 lg:right-0 lg:-top-20">
-              <img src="/src/images/dog1.png" alt="" />
+              <img src="/src/assets/images/dog1.png" alt="" />
             </div>
           </div>
 
@@ -110,7 +110,7 @@
               class="lg:absolute lg:right-0 lg:translate-x-28 lg:-top-7 relative bottom-[29.6rem] z-10"
             >
               <img
-                src="/src/images/people3.svg"
+                src="/src/assets/images/people3.svg"
                 alt=""
                 class="h-[330px] lg:w-[614px] lg:h-[435px] object-cover"
               />
@@ -140,7 +140,7 @@
               class="lg:absolute lg:right-0 lg:translate-x-28 lg:-top-7 relative bottom-[29.6rem] z-10"
             >
               <img
-                src="/src/images/people3.svg"
+                src="/src/assets/images/people3.svg"
                 alt=""
                 class="w-full h-[330px] lg:w-[614px] lg:h-[435px] object-cover"
               />
