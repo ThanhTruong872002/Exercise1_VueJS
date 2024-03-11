@@ -9,7 +9,7 @@
         class="cursor-pointer hover:opacity-70"
       >
         <a :href="item.link" target="_blank"
-          ><img :src="item.image" alt="Brand Logo"
+          ><img :src="`${item.image}`" alt="Brand Logo"
         /></a>
       </div>
     </div>
@@ -48,13 +48,14 @@
   </div>
 </template>
 <script>
+import Brand1 from "/src/assets/images/Brand1.svg"
 export default {
   name: "comp-blog",
   data() {
     return {
       brand: [
         {
-          image: "/src/images/Brand1.svg",
+          image: Brand1,
           link: "https://www.atlassian.com/git/tutorials/syncing/git-pull",
         },
         {

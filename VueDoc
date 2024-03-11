@@ -71,3 +71,55 @@ filters: {
         return soTien.toFixed(2).replace(/\d(?=(\.....)))
     }
 }
+
+
+
+13. Ref:
+
+    + Là một API để tạo ra các biến reactive đơn giản.
+    + Có thể sử dụng với bất kỳ kiểu dữ liệu nào, bao gồm cả các kiểu dữ liệu nguyên thủy như string, number, boolean.
+    + Tạo ra một object mutable, có thể thay đổi giá trị trực tiếp.
+    + Khi sử dụng trong template, không cần sử dụng .value vì nó được tự động unwrap.
+
+*Khi nào nên sử dụng ref:
+
+    + Khi cần tạo ra một biến reactive đơn giản, ví dụ như một string, number hoặc boolean.
+    + Khi cần thay đổi giá trị của biến reactive trực tiếp.
+
+
+14. Reactive:
+
+    + Là một API để tạo ra các object reactive.
+    + Chỉ có thể sử dụng với các object, bao gồm object, array, map và set.
+    + Tạo ra một object proxy, bất kỳ thay đổi nào trên object gốc đều được phản ánh trong proxy.
+    + Khi sử dụng trong template, cần sử dụng .value để truy cập giá trị.
+
+
+* Khi nào nên sử dụng reactive: 
+
+    Khi cần tạo ra một object reactive.
+    Khi cần theo dõi các thay đổi trên object và cập nhật giao diện người dùng.
+
+
+
++Ref:
+    Khi bạn update giá trị của ref bên trong child component, Vue.js sẽ không tự động cập nhật giao diện người dùng.
+
+    Để khắc phục vấn đề này, bạn cần sử dụng emit để emit một event từ child component và listen event đó trong parent component để cập nhật giá trị của ref.
+
++Reactive value:
+    Khi bạn update giá trị của reactive value bên trong child component, Vue.js sẽ tự động cập nhật giao diện người dùng.
+
+Lý do:
+
+Ref:
+Ref là một object mutable, và Vue.js không thể theo dõi các thay đổi trực tiếp trên object mutable.
+
+Reactive value:
+Reactive value là một object proxy, và Vue.js có thể theo dõi các thay đổi trên object proxy.
+
+Kết luận:
+
+Nếu bạn cần update giá trị của ref bên trong child component, bạn cần sử dụng emit và listen event.
+Nếu bạn cần update giá trị của reactive value bên trong child component, bạn không cần làm gì thêm, Vue.js sẽ tự động cập nhật giao
+

@@ -52,39 +52,28 @@
         </div>
       </div>
     </div>
-    <div class="container">
-      <div
-        class="lg:mt-48 mt-[700px] flex gap-4 max-md:justify-center items-center"
-      >
-        <div
-          @click="prevSlide"
-          class="w-[48px] h-[48px] rounded-[50%] bg-red-500 flex justify-center items-center cursor-pointer"
-        >
-          <img src="/src//images/Triangle_left.svg" alt="" />
-        </div>
-        <div
-          @click="nextSlide"
-          class="w-[48px] h-[48px] rounded-[50%] bg-red-500 flex justify-center items-center cursor-pointer"
-        >
-          <img src="/src//images/Triangle_right.svg" alt="" />
-        </div>
-      </div>
-
-      <div class="hidden w-full h-[2px] bg-black mt-64"></div>
-    </div>
+    <comp-client-button
+      @nextSlide="nextSlide"
+      @prevSlide="prevSlide"
+      :slideIndex="slideIndex"
+    />
   </div>
   <comp-blog />
 </template>
 <script>
 import CompBlog from "../Blog/CompBlog.vue";
+import { ref } from "vue";
+import CompClientButton from "./CompClientButton.vue";
+
 export default {
   name: "comp-client",
   components: {
     CompBlog,
+    CompClientButton,
   },
   data() {
     return {
-      slideIndex: 0,
+      slideIndex: ref(0),
       clientSay: [
         {
           image: "/src/images/Ava.svg",
@@ -126,3 +115,4 @@ export default {
 };
 </script>
 <style lang="css"></style>
+import CompClientButtonVue from "./CompClientButton.vue";

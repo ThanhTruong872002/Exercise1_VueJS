@@ -15,7 +15,7 @@
                   {{ banner.title }}
                 </h1>
                 <div class="lg:mt-16 mt-10 flex gap-14">
-                  <img src="/src/images/Flower_decor.svg" alt="" />
+                  <img :src="imageFL" alt="" />
                   <p
                     class="text-white text-[16px] uppercase w-[229px] lg:w-[370px] leading-[40px] roboto-condensed tracking-[2px]"
                   >
@@ -48,33 +48,27 @@
       </div>
     </div>
   </div>
-  <div class="container">
-    <div class="mt-96 lg:mt-40 flex gap-4 items-center">
-      <div
-        @click="prevSlide"
-        class="w-[48px] h-[48px] rounded-[50%] bg-red-500 flex justify-center items-center cursor-pointer"
-      >
-        <img src="/src/images/Triangle_left.svg" alt="" class="" />
-      </div>
-      <div
-        @click="nextSlide"
-        class="w-[48px] h-[48px] rounded-[50%] bg-red-500 flex justify-center items-center cursor-pointer"
-      >
-        <img src="/src/images/Triangle_right.svg" alt="" class="" />
-      </div>
-      <p class="text-black font-bold text-[24px] ml-6">
-        {{ slideIndex + 1 }} / {{ banners.length }}
-      </p>
-    </div>
-    <div class="w-full h-[2px] bg-black mt-40 lg:mt-96"></div>
-  </div>
+  <comp-hero-button
+    @nextSlide="nextSlide"
+    @prevSlide="prevSlide"
+    :slideIndex="slideIndex"
+    :bannersLength="banners.length"
+  />
 </template>
 <script>
+import CompHeroButton from "./CompHeroButton.vue";
+import { ref } from "vue";
+import Flower from "/src/assets/images/Flower_decor.svg"
 export default {
   name: "comp-hero",
+  components: {
+    CompHeroButton,
+    Flower
+  },
   data() {
     return {
-      slideIndex: 0,
+      slideIndex: ref(0),
+      imageFL: Flower,
       banners: [
         {
           title: "We Create Amazing Sites With Ease",
