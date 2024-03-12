@@ -49,29 +49,10 @@
 </template>
 <script setup>
 import { ref, onMounted } from "vue";
+import { BRANDS } from "@/constants/Brand";
+import { BLOGS } from "@/constants/Blog";
+const blogs = ref(BLOGS);
 
-const blogs = ref([]);
-
-const brands = ref([]);
-
-onMounted(async () => {
-  try {
-    const res = await fetch("data/blogs.json");
-    const result = await res.json();
-    blogs.value = result;
-  } catch (error) {
-    console.log(error);
-  }
-});
-
-onMounted(async () => {
-  try {
-    const res = await fetch("data/brands.json");
-    const result = await res.json();
-    brands.value = result;
-  } catch (error) {
-    console.log(error);
-  }
-});
+const brands = ref(BRANDS);
 </script>
 <style lang=""></style>

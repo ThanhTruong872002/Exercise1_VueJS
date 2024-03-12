@@ -64,18 +64,8 @@
 import CompBlog from "../Blog/CompBlog.vue";
 import CompClientButton from "./CompClientButton.vue";
 import { ref, onMounted } from "vue";
-
-const clientSay = ref([]);
-
-onMounted(async () => {
-  try {
-    const res = await fetch("data/clients.json");
-    const result = await res.json();
-    clientSay.value = result;
-  } catch (error) {
-    console.log(error);
-  }
-});
+import { CLIENTS } from "@/constants/Client";
+const clientSay = ref(CLIENTS);
 
 const nextSlide = () => {
   const firstItem = clientSay.value[0];

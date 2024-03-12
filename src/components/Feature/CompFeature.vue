@@ -23,7 +23,7 @@
         :style="{ transform: `translateX(-${slideIndex * 102}%)` }"
         class="mt-48 flex transition-transform duration-500 lg:gap-4 pl-10 gap-5"
       >
-        <div v-for="(feature, index) in features" :key="index">
+        <div v-for="(feature, index) in FEATURES" :key="index">
           <div
             class="w-[320px] h-[384px] lg:h-[282px] lg:mr-0 lg:w-[580px] py-20 px-14 -translate-x-12 lg:translate-x-0"
             :class="`${feature.background}`"
@@ -52,23 +52,11 @@
 </template>
 <script setup>
 import { ref, onMounted } from "vue";
-import { TEST } from "../constant";
+import { FEATURES } from "@/constants/Feature";
 
 const slideIndex = ref(0);
 
-const features = ref([]);
-
 const slides = ref(Array.from({ length: 3 }, (_, index) => index));
-
-onMounted(async () => {
-  try {
-    const res = await fetch("data/features.json");
-    const result = await res.json();
-    features.value = result;
-  } catch (error) {
-    console.log(error);
-  }
-});
 
 const goToSlide = (index) => {
   slideIndex.value = index;
