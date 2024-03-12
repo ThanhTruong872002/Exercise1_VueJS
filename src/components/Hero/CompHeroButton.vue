@@ -13,18 +13,19 @@
       >
         <img src="/src/assets/images/Triangle_right.svg" alt="" class="" />
       </div>
-      <p class="text-black font-bold text-[24px] ml-6">{{slideIndex + 1}}/ {{ bannersLength }}</p>
+      <p class="text-black font-bold text-[24px] ml-6">
+        {{ slideIndex + 1 }}/ {{ bannersLength }}
+      </p>
     </div>
     <div class="w-full h-[2px] bg-black mt-40 lg:mt-96"></div>
   </div>
 </template>
-<script>
-export default {
-  name: "comp-hero-button",
-  props: {
-    slideIndex: Number,
-    bannersLength: Number,
-  },
-};
+<script setup>
+import { defineProps } from "vue";
+
+const props = defineProps({
+  slideIndex: Number,
+  bannersLength: Number,
+});
 </script>
 <style lang=""></style>

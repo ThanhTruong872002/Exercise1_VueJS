@@ -149,7 +149,7 @@
           <div class="text-center">
             <button
               @click="handleLoadMore"
-              class="mt-20 w-[170px] h-[48px] font-medium text-[16px] text-white uppercase bg-[#FF564F]"
+              class="mt-20 w-[170px] h-[48px] font-medium text-[16px] text-white uppercase bg-[#FF564F] hover:opacity-80"
             >
               Load more
             </button>

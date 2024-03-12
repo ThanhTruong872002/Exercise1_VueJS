@@ -45,83 +45,31 @@
         v-for="(slide, index) in slides"
         :key="index"
         @click="goToSlide(index)"
-        :class="{
-          'text-white': index === slideIndex,
-          'text-gray-400': index !== slideIndex,
-        }"
         class="focus:bg-violet-700 mx-1 w-4 h-4 bg-white rounded-[50%] mt-6"
       ></button>
     </div>
   </div>
 </template>
-<script>
-import FeatureImg1 from "/src/assets/images/Feature1.svg";
-import FeatureImg2 from "/src/assets/images/Feature2.svg";
+<script setup>
+import { ref, onMounted } from "vue";
 
-export default {
-  name: "comp-feature",
-  data() {
-    return {
-      text: "Our Core Feature",
-      slideIndex: 0,
-      slides: [],
-      features: [
-        {
-          image: FeatureImg1,
-          title: "WHITE LABEL",
-          subTitle:
-            "Minuteness of the parts formed a great hindrance to my speed, resolved, contrary to my first intention, to make the being.",
-          background: "bg-[#9013FE]",
-        },
-        {
-          image: FeatureImg2,
-          title: "CODE EXPORT",
-          subTitle:
-            "Minuteness of the parts formed a great hindrance to my speed, resolved, contrary to my first intention, to make the being.",
-          background: "bg-[#417505]",
-        },
-        {
-          image: FeatureImg1,
-          title: "JAVASCRIPT",
-          subTitle:
-            "Minuteness of the parts formed a great hindrance to my speed, resolved, contrary to my first intention, to make the being.",
-          background: "bg-red-500",
-        },
-        {
-          image: FeatureImg2,
-          title: "PYTHON",
-          subTitle:
-            "Minuteness of the parts formed a great hindrance to my speed, resolved, contrary to my first intention, to make the being.",
-          background: "bg-blue-200",
-        },
-        {
-          image: FeatureImg1,
-          title: "WHITE LABEL",
-          subTitle:
-            "Minuteness of the parts formed a great hindrance to my speed, resolved, contrary to my first intention, to make the being.",
-          background: "bg-[#9013FE]",
-        },
-        {
-          image: FeatureImg2,
-          title: "CODE EXPORT",
-          subTitle:
-            "Minuteness of the parts formed a great hindrance to my speed, resolved, contrary to my first intention, to make the being.",
-          background: "bg-[#417505]",
-        },
-      ],
-    };
-  },
-  mounted() {
-    this.slides = Array.from(
-      { length: this.features.length },
-      (_, index) => index
-    );
-  },
-  methods: {
-    goToSlide(index) {
-      this.slideIndex = index;
-    },
-  },
+const slideIndex = ref(0);
+
+const features = ref([]);
+
+const slides = ref(Array.from({ length: 3 }, (_, index) => index));
+
+onMounted(async () => {
+  try {
+    const res = await fetch("data/features.json");
+    const result = await res.json();
+    features.value = result;
+  } catch (error) {
+    console.log(error);
+  }
+});
+
+const goToSlide = (index) => {
+  slideIndex.value = index;
 };
 </script>
-<style lang=""></style>

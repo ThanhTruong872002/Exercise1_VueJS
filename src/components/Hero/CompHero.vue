@@ -48,48 +48,36 @@
       </div>
     </div>
   </div>
-  <comp-hero-button
+  <CompHeroButton
     @nextSlide="nextSlide"
     @prevSlide="prevSlide"
     :slideIndex="slideIndex"
     :bannersLength="banners.length"
   />
 </template>
-<script>
+<script setup>
 import CompHeroButton from "./CompHeroButton.vue";
 import { ref } from "vue";
-export default {
-  name: "comp-hero",
-  components: {
-    CompHeroButton,
+const slideIndex = ref(0);
+const banners = [
+  {
+    title: "We Create Amazing Sites With Ease",
+    subtitle: " A peep at some distant orb has power to raise and purify",
+    background: "bg-[#FF564F]",
   },
-  data() {
-    return {
-      slideIndex: ref(0),
-      banners: [
-        {
-          title: "We Create Amazing Sites With Ease",
-          subtitle: " A peep at some distant orb has power to raise and purify",
-          background: "bg-[#FF564F]",
-        },
-        {
-          title: "We Create Amazing Sites With Ease",
-          subtitle: " A peep at some distant orb has power to raise and purify",
-          background: "bg-[#ccc]",
-        },
-      ],
-    };
+  {
+    title: "We Create Amazing Sites With Ease",
+    subtitle: " A peep at some distant orb has power to raise and purify",
+    background: "bg-[#ccc]",
   },
-  methods: {
-    nextSlide() {
-      this.slideIndex = (this.slideIndex + 1) % this.banners.length;
-    },
-    prevSlide() {
-      if (this.slideIndex !== 0) {
-        this.slideIndex = (this.slideIndex - 1) % this.banners.length;
-      }
-    },
-  },
+];
+const nextSlide = () => {
+  slideIndex.value = (slideIndex.value + 1) % banners.length;
+};
+const prevSlide = () => {
+  if (slideIndex.value !== 0) {
+    slideIndex.value = (slideIndex.value - 1) % banners.length;
+  }
 };
 </script>
 <style lang=""></style>

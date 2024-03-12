@@ -52,70 +52,42 @@
         </div>
       </div>
     </div>
-    <comp-client-button
+    <CompClientButton
       @nextSlide="nextSlide"
       @prevSlide="prevSlide"
       :slideIndex="slideIndex"
     />
   </div>
-  <comp-blog />
+  <CompBlog />
 </template>
-<script>
+<script setup>
 import CompBlog from "../Blog/CompBlog.vue";
-import { ref } from "vue";
 import CompClientButton from "./CompClientButton.vue";
-import Avatar1 from "/src/assets/images/Ava.svg"
-import Avatar2 from "/src/assets/images/Ava2.svg"
+import { ref, onMounted } from "vue";
 
+const clientSay = ref([]);
 
-export default {
-  name: "comp-client",
-  components: {
-    CompBlog,
-    CompClientButton,
-  },
-  data() {
-    return {
-      slideIndex: ref(0),
-      clientSay: [
-        {
-          image: Avatar1,
-          name: "HELENA BRAUER",
-          company: "Apple Inc.",
-          background: "bg-[#417505]",
-          desc: "What looked like a small patch of purple grass, above five feet square, was moving across the sand in their direction. When it came near enough he perceived that it was not grass; there were no blades, but only purple roots. The roots were revolving, for each small plant in the whole patch, like the spokes of a rimless wheel.",
-        },
-        {
-          image: Avatar2,
-          name: "Kay Totleben",
-          company: "Microsoft",
-          background: "bg-[#9013FE]",
-          desc: "What looked like a small patch of purple grass, above five feet square, was moving across the sand in their direction. When it came near enough he perceived that it was not grass; there were no blades, but only purple roots. The roots were revolving, for each small plant in the whole patch, like the spokes of a rimless wheel.",
-        },
-        {
-          image: Avatar2,
-          name: "Kay Totleben",
-          company: "Microsoft",
-          background: "bg-red-500",
-          desc: "What looked like a small patch of purple grass, above five feet square, was moving across the sand in their direction. When it came near enough he perceived that it was not grass; there were no blades, but only purple roots. The roots were revolving, for each small plant in the whole patch, like the spokes of a rimless wheel.",
-        },
-      ],
-    };
-  },
-  methods: {
-    nextSlide() {
-      const firstItem = this.clientSay[0];
-      this.clientSay.shift();
-      this.clientSay.push(firstItem);
-    },
-    prevSlide() {
-      const lastIndex = this.clientSay.length - 1;
-      const lastItem = this.clientSay[lastIndex];
-      this.clientSay.pop();
-      this.clientSay.unshift(lastItem);
-    },
-  },
+onMounted(async () => {
+  try {
+    const res = await fetch("data/clients.json");
+    const result = await res.json();
+    clientSay.value = result;
+  } catch (error) {
+    console.log(error);
+  }
+});
+
+const nextSlide = () => {
+  const firstItem = clientSay.value[0];
+  clientSay.value.shift();
+  clientSay.value.push(firstItem);
+};
+
+const prevSlide = () => {
+  const lastIndex = clientSay.value.length - 1;
+  const lastItem = clientSay.value[lastIndex];
+  clientSay.value.pop();
+  clientSay.value.unshift(lastItem);
 };
 </script>
 <style lang="css"></style>
-import CompClientButtonVue from "./CompClientButton.vue";

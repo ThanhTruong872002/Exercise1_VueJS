@@ -1,11 +1,11 @@
 <template lang="">
   <div class="container">
-    <div class="w-full h-[2px] bg-black mt-64 mb-40"></div>
+    <div class="w-full h-[2px] bg-black mt-20 lg:mt-64 lg:mb-40"></div>
     <div
-      class="flex flex-col lg:flex-row items-center justify-between my-32 gap-32 lg:gap-0 mt-80 lg:mt-0"
+      class="flex flex-col lg:flex-row items-center justify-between my-32 gap-32 lg:gap-0 mt-40 lg:mt-0"
     >
       <div
-        v-for="(item, index) in brand"
+        v-for="(item, index) in brands"
         class="cursor-pointer hover:opacity-70"
       >
         <a :href="item.link" target="_blank"
@@ -47,66 +47,31 @@
     </div>
   </div>
 </template>
-<script>
-import Brand1 from "/src/assets/images/Brand1.svg"
-import Brand2 from "/src/assets/images/Brand1.svg"
-import Brand3 from "/src/assets/images/Brand1.svg"
-import Brand4 from "/src/assets/images/Brand1.svg"
-import Brand5 from "/src/assets/images/Brand1.svg"
-import Block1 from "/src/assets/images/block1.svg"
-import Block2 from "/src/assets/images/block2.svg"
-import Block3 from "/src/assets/images/block3.svg"
+<script setup>
+import { ref, onMounted } from "vue";
 
+const blogs = ref([]);
 
+const brands = ref([]);
 
-export default {
-  name: "comp-blog",
-  data() {
-    return {
-      brand: [
-        {
-          image: Brand1,
-          link: "https://www.atlassian.com/git/tutorials/syncing/git-pull",
-        },
-        {
-          image: Brand2,
-          link: "https://www.bing.com/search?pglt=41&q=slack&cvid=c9980da298bb43be807f911bab27e39b&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIGCAEQABhAMgYIAhAAGEAyBggDEAAYQDIGCAQQABhAMgYIBRAAGEAyBggGEAAYQDIGCAcQABhAMgYICBAAGEDSAQg0MzcxajBqMagCALACAA&FORM=ANNTA1&adppc=EDGEESS&PC=EDGEESS",
-        },
-        {
-          image: Brand3,
-          link: "https://www.dropbox.com/",
-        },
-        {
-          image: Brand4,
-          link: "https://www.shopify.com/free-trial/3s?gclid=17bfd3e6b02314f2b192b60a8cc9c074&gclsrc=3p.ds&&utm_medium=cpc&utm_source=yabing&jk=shopify&utm_source=yabing&utm_medium=cpc&utm_campaign=429206062&bingadgroupid=1230353764689029&bingadid=76897258418057&bingkeywordid=76897314828284&bingnetwork=o&BOID=brand&msclkid=17bfd3e6b02314f2b192b60a8cc9c074&utm_term=shopify&utm_content=Brand%20-%20Shopify",
-        },
-        {
-          image: Brand5,
-          link: "https://www.google.com/",
-        },
-      ],
-      blogs: [
-        {
-          title: "design",
-          description: "Truly it was a great journey and in it I met with many",
-          date: "14 November, 2019",
-          image: Block1,
-        },
-        {
-          title: "tech",
-          description: "What looked like a small patch of purple grass",
-          date: "14 November, 2019",
-          image: Block2,
-        },
-        {
-          title: "life",
-          description: "The roots were revolving small plant",
-          date: "14 November, 2019",
-          image: Block3,
-        },
-      ],
-    };
-  },
-};
+onMounted(async () => {
+  try {
+    const res = await fetch("data/blogs.json");
+    const result = await res.json();
+    blogs.value = result;
+  } catch (error) {
+    console.log(error);
+  }
+});
+
+onMounted(async () => {
+  try {
+    const res = await fetch("data/brands.json");
+    const result = await res.json();
+    brands.value = result;
+  } catch (error) {
+    console.log(error);
+  }
+});
 </script>
 <style lang=""></style>
