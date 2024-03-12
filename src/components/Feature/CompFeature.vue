@@ -52,6 +52,7 @@
 </template>
 <script setup>
 import { ref, onMounted } from "vue";
+import { TEST } from "../constant";
 
 const slideIndex = ref(0);
 
