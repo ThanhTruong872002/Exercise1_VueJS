@@ -21,7 +21,7 @@
           <div
             class="gap-4 relative lg:absolute lg:-right-96 lg:top-[20%] w-[940px] text-[16px]"
           >
-            <div class="w-full flex lg:gap-6">
+            <div class="w-full flex lg:gap-6 cursor-pointer">
               <div v-for="(item, index) in clientSay" :key="index">
                 <div
                   class="w-[329px] lg:h-auto lg:w-[470px] py-16 px-8 lg:px-14 mt-20 lg:mt-0"

@@ -17,7 +17,7 @@
             Get in touch
           </div>
           <input
-            type="text"
+            type="email"
             name=""
             id=""
             placeholder="Your email"
@@ -42,22 +42,26 @@
         </div>
         <div class="col-span-3 grid gap-4">
           <h2>ADDRESS</h2>
-          <p class="mt-6 w-[190px] text-[#FFFFFF80] cursor-pointer">
+          <p class="mt-6 w-[190px] text-[#FFFFFF80]">
             3899 Fusce Rd. Frederick Nebraska 20620
           </p>
-          <p class="cursor-pointer">info@agency.com</p>
-          <a class="cursor-pointer">+1 (234) 567-89-00</a>
+          <a class="cursor-pointer" href="#">info@agency.com</a>
+          <a class="cursor-pointer" href="#">+1 (234) 567-89-00</a>
         </div>
         <div class="col-span-3 grid gap-4">
           <p>MENU</p>
-          <p class="mt-6 w-[140px] text-[#FFFFFF80] cursor-pointer">About</p>
+          <p class="mt-6 w-[140px] cursor-pointer">About</p>
           <a href="#portfolio" class="cursor-pointer">Portfolio</a>
           <a class="cursor-pointer">Blog</a>
           <a class="cursor-pointer">Testimonials</a>
           <a href="#contact" class="cursor-pointer">Contact</a>
         </div>
         <div class="col-span-3">
-          <a href="https://www.facebook.com/profile.php?id=100012255758419" target="_blank"><img src="/src/assets/images/social.svg" alt="" /></a>
+          <a
+            href="https://www.facebook.com/profile.php?id=100012255758419"
+            target="_blank"
+            ><img src="/src/assets/images/social.svg" alt=""
+          /></a>
         </div>
       </div>
     </div>

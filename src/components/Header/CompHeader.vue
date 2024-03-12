@@ -1,12 +1,18 @@
 <template lang="">
   <div class="pt-10 pb-40 bg-black h-auto overflow-hidden">
     <div class="container flex justify-between items-center">
-      <h1 class="text-white font-bold lg:text-[24px] uppercase text-[16px]">
+      <h1
+        class="text-white font-bold lg:text-[24px] uppercase text-[16px] cursor-pointer"
+      >
         Agency
       </h1>
       <div>
         <div class="lg:hidden cursor-pointer" @click="toggleMenu">
-          <img src="/src/assets/images/menu.svg" alt="" class="w-[30px] h-[28px]" />
+          <img
+            src="/src/assets/images/menu.svg"
+            alt=""
+            class="w-[30px] h-[28px]"
+          />
         </div>
         <div
           v-if="isOpen === true"

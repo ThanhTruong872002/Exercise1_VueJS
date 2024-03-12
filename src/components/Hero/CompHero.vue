@@ -2,11 +2,13 @@
   <div class="bg-black lg:pb-40 z-10">
     <div class="container overflow-x-clip">
       <div
-        :style="{ transform: `translateX(-${slideIndex * 105}%)` }"
+        :style="{ transform: `translateX(-${slideIndex * 106}%)` }"
         class="transition-transform duration-500 flex gap-10 lg:gap-0"
       >
         <div v-for="(banner, index) in banners" :key="index" class="px-2">
-          <div class="relative flex flex-col lg:flex-row lg:w-[1220px] mr-5">
+          <div
+            class="relative flex flex-col lg:flex-row lg:w-[1220px] lg:mr-10"
+          >
             <div class="z-10">
               <div class="flex flex-col">
                 <h1
